@@ -4,6 +4,8 @@
 
 This matlab package contains files implementing the technique developed for source enumeration, node clustering around a dominant source and robust voice activity detection in WASN in [1]. 
 
+Requires MATLAB version 2018 or later.
+
 ############
 # Abstract #
 ############
@@ -14,7 +16,12 @@ We propose a robust technique for multi-speaker voice activity detection and sou
 # File Usage #
 ##############
 
-main.m - Runs scenario 1 and scenario 2 described in the paper. 
+main.m - Runs scenario 1 and scenario 2 described in the paper. To run it: 
+- Add folders applied_methods, data-scenario1, data-scenario2 and performance_analysis to the MATLAB path.
+- Set the block-length for the group sparse approach in line 47 of main.m
+- Then run main
+- After termination, set the desired speaker you want to plot energy signature and VAP for in line 6 of plot_en_sig_vap.m (first number of scenario, then speaker number)
+- You have reproduced the results from the paper.
 
 To generate your own scenario, please download the HANDiCAMS database at the following link and use join_micsigs.m:
 https://www2.nt.tu-darmstadt.de/data/clustered_vad_data.zip 
