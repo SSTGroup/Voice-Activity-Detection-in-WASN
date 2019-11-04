@@ -1,0 +1,3 @@
+Folder contains the clustered received signal matrices for scenario 1 (and the network wide received signal matrix, for reference M-NICA).
+
+Clean and disturbed by white noise (the later one used in the paper)
