@@ -181,10 +181,10 @@ Lambda_star_matrix = E_star_matrix-1;
 smax = 10; % To test for this application. The maximum possible d can be changed
 for s=0:smax
     
-    T = sum(Lambda(s+1:s+P).^2);
-    
+    T = sum(Lambda(s+1:s+P).^2); % A more robust statistic tests for P (than just one) eigenvalues equal to 1
+                                 % Can be changed to T = (Lambda(s+1)^2) when only one eigenvalue is tested
     for b=1:B
-        T2_star(b) =  sum(Lambda_star_matrix(s+1:s+P,b).^2);
+        T2_star(b) =  sum(Lambda_star_matrix(s+1:s+P,b).^2); % Can be changed to T2_star = (Lambda_star_matrix(s+1,b)^2); when only one eigenvalue is tested 
         T2_null(b) = T2_star(b) - T;
         if(abs(T) <= abs(T2_null(b)))
             Indicator(b) = 1;
